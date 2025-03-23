@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .brick-bg {
+            background-color: #457B9D;
+            background-image: linear-gradient(45deg, #457B9D 25%, #1D3557 25%, #1D3557 50%, #457B9D 50%, #457B9D 75%, #1D3557 75%, #1D3557 100%);
+            background-size: 56.57px 56.57px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-[#1D3557]">Portfolio</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-[#457B9D] hover:text-[#1D3557] transition">Home</a>
+                    <a href="#work" class="text-[#457B9D] hover:text-[#1D3557] transition">Work</a>
+                    <a href="#about" class="text-[#457B9D] hover:text-[#1D3557] transition">About</a>
+                    <a href="#contact" class="text-[#457B9D] hover:text-[#1D3557] transition">Contact</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#home" class="text-[#457B9D] hover:text-[#1D3557] transition">Home</a>
+                <a href="#work" class="text-[#457B9D] hover:text-[#1D3557] transition">Work</a>
+                <a href="#about" class="text-[#457B9D] hover:text-[#1D3557] transition">About</a>
+                <a href="#contact" class="text-[#457B9D] hover:text-[#1D3557] transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="brick-bg min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Welcome to My Portfolio</h1>
+                <p class="text-xl md:text-2xl mb-8">Creative Developer & Designer</p>
+                <a href="#work" class="bg-white text-[#1D3557] px-8 py-3 rounded-full hover:bg-opacity-90 transition">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#1D3557]">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Cards -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://source.unsplash.com/800x600/?website" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Project One</h3>
+                        <p class="text-gray-600 mb-4">A responsive web application built with modern technologies.</p>
+                        <a href="#" class="text-[#457B9D] hover:text-[#1D3557]">Learn more →</a>
+                    </div>
+                </div>
+                <!-- Repeat for other projects -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://source.unsplash.com/800x600/?app" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Project Two</h3>
+                        <p class="text-gray-600 mb-4">Mobile-first design approach with seamless user experience.</p>
+                        <a href="#" class="text-[#457B9D] hover:text-[#1D3557]">Learn more →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://source.unsplash.com/800x600/?design" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Project Three</h3>
+                        <p class="text-gray-600 mb-4">Creative design solutions for modern businesses.</p>
+                        <a href="#" class="text-[#457B9D] hover:text-[#1D3557]">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-[#F1FAEE]">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8 text-[#1D3557]">About Me</h2>
+                <p class="text-gray-700 mb-8">I'm a passionate developer and designer with expertise in creating beautiful, functional websites and applications. With years of experience in the industry, I focus on delivering high-quality solutions that meet client needs.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-[#457B9D] hover:text-[#1D3557] text-2xl"><i class="bi bi-github"></i></a>
+                    <a href="#" class="text-[#457B9D] hover:text-[#1D3557] text-2xl"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-[#457B9D] hover:text-[#1D3557] text-2xl"><i class="bi bi-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#1D3557]">Get In Touch</h2>
+            <div class="max-w-xl mx-auto">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-[#457B9D]" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-[#457B9D]" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 mb-2">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-[#457B9D]" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-[#457B9D] text-white py-3 rounded-lg hover:bg-[#1D3557] transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1D3557] text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send this data to a server
+            console.log('Form submitted:', { name, email, message });
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
